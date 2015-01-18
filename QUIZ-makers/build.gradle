@@ -1,0 +1,33 @@
+apply plugin: 'java'
+apply plugin: 'war'
+
+version = '0.0.1'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+  
+  mavenCentral()
+  
+}
+def junitVersion = '4.11'
+def springVersion = '4.0.7.RELEASE'
+def servletAPIVersion = '2.5'
+
+dependencies {
+  testCompile "junit:junit:$junitVersion"
+  compile "org.springframework.security:spring-security-web:3.2.5.RELEASE"
+  compile "org.springframework:spring-core:$springVersion"
+  compile "org.springframework:spring-beans:$springVersion"
+  compile "org.springframework:spring-web:$springVersion"
+  compile "org.springframework:spring-webmvc:$springVersion"
+  compile "org.springframework.security:spring-security-taglibs:3.2.5.RELEASE"
+	compile 'org.springframework.security:spring-security-config:3.2.5.RELEASE'
+	
+  compile 'jstl:jstl:1.2'
+  
+ 
+  providedCompile "javax.servlet:servlet-api:$servletAPIVersion"
+  
+}
